@@ -1,2 +1,2 @@
 # Avaliacao-diagnostica-POO4
-Exercício proposta em sala de aula
+Exercício proposto em sala de aula como avaliação diagnostica.
