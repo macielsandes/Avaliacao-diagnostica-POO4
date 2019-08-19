@@ -5,7 +5,6 @@
  */
 package Principal;
 
-
 /**
  *
  * @author macie
@@ -26,10 +25,13 @@ public class Quadrado {
         return perimetro;
     }
     
-    //imprime
-    /*void imprimir(){
-        JOptionPane.showMessageDialog("O quadrado de lado: ",lado );
-    }*/
+   /*void construtor(){
+      double entrada;      
+      entrada = Double.parseDouble((JOptionPane.showInputDialog("Informe do "
+              + "valor do lado do quadrado"));
+      lado = entrada
+        //lado = entrada.nextDouble();*/
+    //}
     
     
 }

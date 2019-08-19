@@ -32,7 +32,7 @@ public class Principal {
                 + "2 - Para uma form tridimensional \n"));
    
         if (opcao == 1) {
-            bidimensional();
+            bidimensional();            
         }
         if (opcao == 2) {
             tridimensional();
@@ -58,11 +58,11 @@ public class Principal {
             case 1:
                 circulo.solicitainformacoes();
                 break;
-           /* case 1:
+           /* case 2:
 
-            case 2:
+            case 3:
 
-            case 3:*/
+            case 4:*/
                   
         }
     
