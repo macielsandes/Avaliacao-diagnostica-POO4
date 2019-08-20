@@ -7,7 +7,7 @@ package Principal;
 
 /**
  *
- * @author macie
+ * @author maciel
  */
 public class Triangulo {
     

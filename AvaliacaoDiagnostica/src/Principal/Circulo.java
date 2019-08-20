@@ -5,33 +5,24 @@
  */
 package Principal;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author ht3000966
  */
-public class Circulo {
-        
+public class Circulo {        
         //variavel principais
         private double area, tamanhoRaio; //
         private double raio;
         private final double PI = Math.PI;
         
         //Calcula a Area
-     public double calcularArea(){
+     public double calcularArea(Double tamanhoRaio){
             area = PI *(raio * raio);
             return area;            
         }
-        
-    public void solicitainformacoes() {
-        tamanhoRaio = Double.parseDouble(JOptionPane.showInputDialog("Informe o raio:"));
-            calcularArea();      
-            
+                  
     }
 
-    
-    
-    }
+   
     
 
