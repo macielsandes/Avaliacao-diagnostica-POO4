@@ -15,10 +15,10 @@ public class Triangulo {
     private double altura;
     private double area;
     
-    // pedir para o usuario informar a base e a altura do triangulo para ser ter a AREA
+    //pedir para o usuario informar a base e a altura do triangulo para ser ter a AREA
     //Este metodo irá calcular a Area do triangulo
-    public double calcularAreaTri(){
-        area = base * altura;
+    public double calcularTriangulo(double base, double altura){
+        area = ((base * altura) / 2);
         return area;       
     }
     

@@ -26,8 +26,9 @@ public class Principal {
     public static void main(String[] args) {
         
         int opcao; // variavel para guardar opcao do usario
-        
+        int i;
         // Solicitando ao usuario para escolher uma forma
+        while (i>= 0){
         opcao = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma das formas abaixo: \n"
                 + "1 - Para uma forma bidimensional \n"
                 + "2 - Para uma form tridimensional \n"));
@@ -35,13 +36,18 @@ public class Principal {
         //Ainda será necessário fazer correções nesta parte
         if (opcao == 1) {
             bidimensional();
+            i++;
         }
         if (opcao == 2) {
             tridimensional();
+            i++;
         }
-        /*else {
-            JOptionPane.showMessageDialog(frame,"Opcao invalida!");
-        }    */
+        if (opcao !=1 && opcao !=2){
+            JOptionPane.showMessageDialog("Opcao invalida!");
+                }  
+        
+        
+        }// finaliza o while
 
     }
 
@@ -49,8 +55,11 @@ public class Principal {
     public static void bidimensional() {
         
         Circulo circulo = new Circulo(); // Chamando objetos que compoe o circulo
+        Quadrado quadrado = new Quadrado();
+        Triangulo triangulo = new Triangulo();
         
         int escolha; // variavel para armazenar a escolha do usuario
+        double area;
         
         escolha = Integer.parseInt(JOptionPane.showInputDialog("Escolha a forma que deseja calcular: \n"
                 + "1- Círculo\n"
@@ -61,20 +70,41 @@ public class Principal {
             //caso o usuario escolha o circulo
             case 1:
                 double tamanhoRaio;
-                double area;
+                
                 tamanhoRaio = Double.parseDouble(JOptionPane.showInputDialog("Informe o raio:"));
                 circulo.calcularArea(tamanhoRaio);
                 area = tamanhoRaio;
-                JOptionPane.showMessageDialog(null, "Informe o raio:" + area);             
+                JOptionPane.showMessageDialog(null, "A area e: " + area);             
                 break;
             
             //caso o usuario escolha o quadrado    
             case 2:
+                double areaQuadrado;
+                double lado1;
+                double lado2;
+                
+                lado1 = Double.parseDouble(JOptionPane.showInputDialog("Informe o lado 1:"));
+                lado2 = Double.parseDouble(JOptionPane.showInputDialog("Informe o lado 2:"));
+                
+               //Chama a classe que ira fazer o calculo
+                areaQuadrado = quadrado.calcularArea(lado1, lado2);
+                
+                JOptionPane.showMessageDialog(null, "A area e:" + areaQuadrado);                         
                 
 
-           /* case 3:
+           case 3:
+                double base;
+                double altura;
+                
+                base = Double.parseDouble(JOptionPane.showInputDialog("Informe a base:"));
+                altura = Double.parseDouble(JOptionPane.showInputDialog("Informe o altera:"));
+                
+               //Chama a classe que ira fazer o calculo
+                area = triangulo.calcularTriangulo(base, altura);
+                
+                JOptionPane.showMessageDialog(null, "A area e:" + area); 
 
-            case 4:
+           /* case 4:
                   */
                   
         }
@@ -83,21 +113,38 @@ public class Principal {
 
 //Menu para o usuario escolher uma forma tridimensional 
     public static void tridimensional() {
-        int x;
-
-        x = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma forma \n:"
+        
+        Cubo cubo = new Cubo();
+                
+        int escolha;
+       double area;
+       
+        escolha  = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma forma \n:"
                 + "1 - Cubo \n "
                 + "2 - Paralelepido \n "));
 
 
-        /*switch (escolha){
-            
-            case 0:
-                
+        switch (escolha){
+                      
             case 1:
+                double lado1;
+                double lado2;
+                double lado3;
+                
+                lado1 = Double.parseDouble(JOptionPane.showInputDialog("Informe o lado 1:"));
+                lado2 = Double.parseDouble(JOptionPane.showInputDialog("Informe o lado 2:"));
+                lado3 = Double.parseDouble(JOptionPane.showInputDialog("Informe o lado 3:"));
+                
+               //Chama a classe que ira fazer o calculo
+                area = cubo.calcularCubo(lado1, lado2, lado3);
+                
+                JOptionPane.showMessageDialog(null, "A area e:" + area); 
+                
+            /* case 1:
                 
             case 2:
                 
             case 3:*/
     }
+}
 }
