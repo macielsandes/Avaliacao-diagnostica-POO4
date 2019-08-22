@@ -25,28 +25,28 @@ public class Principal {
 
     public static void main(String[] args) {
         
-        int opcao; // variavel para guardar opcao do usario
+        int opcao; // variavel para guardar opcao escolhida pelo usuario
         int i;
-        // Solicitando ao usuario para escolher uma forma
-        while (i>= 0){
-        opcao = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma das formas abaixo: \n"
+       
+        // Pedindo para o usuario para escolher uma forma
+       opcao = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma das formas abaixo: \n"
                 + "1 - Para uma forma bidimensional \n"
                 + "2 - Para uma form tridimensional \n"));
 
         //Ainda será necessário fazer correções nesta parte
         if (opcao == 1) {
             bidimensional();
-            i++;
-        }
+        
         if (opcao == 2) {
             tridimensional();
-            i++;
-        }
-        if (opcao !=1 && opcao !=2){
-            JOptionPane.showMessageDialog("Opcao invalida!");
+           
+        
+        /*if (opcao !=1 && opcao !=2){
+           JOptionPane.showMessageDialog("Opcao invalida!");
+         */
                 }  
         
-        
+       
         }// finaliza o while
 
     }

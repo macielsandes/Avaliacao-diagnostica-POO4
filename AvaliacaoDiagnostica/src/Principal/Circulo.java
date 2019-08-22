@@ -10,13 +10,14 @@ package Principal;
  * @author ht3000966
  */
 public class Circulo {        
+        
         //variavel principais
-        private double area, tamanhoRaio; //
+        private double area;
         private double raio;
         private final double PI = Math.PI;
         
         //Calcula a Area
-     public double calcularArea(Double tamanhoRaio){
+         public double calcularArea(Double tamanhoRaio){
             area = PI *(raio * raio);
             return area;            
         }

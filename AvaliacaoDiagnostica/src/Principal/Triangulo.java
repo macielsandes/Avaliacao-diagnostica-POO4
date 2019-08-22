@@ -11,6 +11,7 @@ package Principal;
  */
 public class Triangulo {
     
+    //principais variaveis
     private double base;
     private double altura;
     private double area;
