@@ -13,12 +13,11 @@ public class Quadrado {
     
     private double lado1, lado2, area, perimetro;
     
-    //Este metodo irá calcular a Area do quadrado
+    //Este metodo calcula a area do quadrado
     public double calcularArea(double lado1, double lado2){
         area = lado1 * lado2;
         return area;       
-    }
-    
+    }    
     //Este metodo irá calcular o Pèrimeto
    public double calcularPerimetro(){
         perimetro = 4 * lado1 * lado2;
