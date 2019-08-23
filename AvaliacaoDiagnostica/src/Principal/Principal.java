@@ -1,29 +1,23 @@
-/*
-Crie uma aplicação que permite ao usuário criar forma bidimensionais e tridimensionais. 
-Ao acessar a aplicação o usuário poderá criar uma forma (por exemplo um círculo, um quadrado, 
-um cubo, um cilindro, etc) e obter algumas informações para a forma criada, 
-por exemplo a área, o perímetro, o volume, etc.
+/*Crie uma aplicação que permite ao usuário criar forma bidimensionais e tridimensionais.  Ao acessar a aplicação o usuário
+poderá criar uma forma (por exemplo um círculo, um quadrado, um cubo, um cilindro, etc) e obter algumas informações para a 
+forma criada, por exemplo a área, o perímetro, o volume, etc.
 Observações importantes:
 ● Não é necessário que sua aplicação faça conexão com alguma banco de dados;
 ● Não é obrigatório a criação de uma interface gráfica para o usuário.
 ● Na classe principal, coloque o nome e o prontuário dos desenvolvedores da
 aplicação.
-
  */
 package Principal;
 
 import javax.swing.JOptionPane;
 
 /**
- * @author ht3000966
+ * @author ht3000966 - Maciel Sandes de Oliveira
+ * @author ht
  */
 public class Principal {
 
-    /**
-     * @param args the command line arguments
-     */
-
-    public static void main(String[] args) {
+      public static void main(String[] args) {
         
         int opcao; // variavel para guardar opcao escolhida pelo usuario
         int i;
@@ -38,18 +32,12 @@ public class Principal {
             bidimensional();
         
         if (opcao == 2) {
-            tridimensional();
-           
+            tridimensional();      
+      }
         
-        /*if (opcao !=1 && opcao !=2){
-           JOptionPane.showMessageDialog("Opcao invalida!");
-         */
-                }  
-        
-       
-        }// finaliza o while
-
-    }
+        }
+      
+      }
 
     //Menu caso o usuario escolha uma forma bidimensional
     public static void bidimensional() {
@@ -121,7 +109,8 @@ public class Principal {
        
         escolha  = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma forma \n:"
                 + "1 - Cubo \n "
-                + "2 - Paralelepido \n "));
+                + "2- Paralelepido \n "
+                +" 3- Paralelepido \n" ));
 
 
         switch (escolha){
