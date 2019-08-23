@@ -7,9 +7,9 @@ package Principal;
 
 /**
  *
- * @author macie
+ * @author maciel
  */
-public class Quadrado {
+public class Quadrado extends Bidimensional {
     
     private double lado1, lado2, area, perimetro;
     
@@ -17,20 +17,28 @@ public class Quadrado {
     public double calcularArea(double lado1, double lado2){
         area = lado1 * lado2;
         return area;       
-    }    
+    }   
+    
     //Este metodo irá calcular o Pèrimeto
    public double calcularPerimetro(){
         perimetro = 4 * lado1 * lado2;
         return perimetro;
     }
     
-   /*void construtor(){
-      double entrada;      
-      entrada = Double.parseDouble((JOptionPane.showInputDialog("Informe do "
-              + "valor do lado do quadrado"));
-      lado = entrada
-        //lado = entrada.nextDouble();*/
-    //}
+
+    @Override
+    public double calcularArea() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        area = lado1 * lado2;
+        return area;   
+    }
+
+    @Override
+    public double perimetro() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        perimetro = 4 * lado1 * lado2;
+        return perimetro;
+    }
     
     
 }

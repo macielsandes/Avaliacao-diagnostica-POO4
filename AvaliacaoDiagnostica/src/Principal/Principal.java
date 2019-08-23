@@ -9,6 +9,7 @@ aplicação.
  */
 package Principal;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -21,6 +22,7 @@ public class Principal {
         
         int opcao; // variavel para guardar opcao escolhida pelo usuario
         int i;
+          ArrayList<Formas> listaFormas = new ArrayList<Formas>(); 
        
         // Pedindo para o usuario para escolher uma forma
        opcao = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma das formas abaixo: \n"
@@ -29,7 +31,7 @@ public class Principal {
 
         //Ainda será necessário fazer correções nesta parte
         if (opcao == 1) {
-            bidimensional();
+        bidimensional();
         
         if (opcao == 2) {
             tridimensional();      
@@ -51,7 +53,8 @@ public class Principal {
         
         escolha = Integer.parseInt(JOptionPane.showInputDialog("Escolha a forma que deseja calcular: \n"
                 + "1- Círculo\n"
-                + "2- Quadrado\n"));
+                + "2- Quadrado\n"
+                + "3- Triangulo\n"));
 
         switch (escolha) {
             
@@ -92,8 +95,8 @@ public class Principal {
                 
                 JOptionPane.showMessageDialog(null, "A area e:" + area); 
 
-           /* case 4:
-                  */
+           //case 4:
+                  
                   
         }
 
