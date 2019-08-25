@@ -12,20 +12,7 @@ package Principal;
 public class Quadrado extends Bidimensional {
     
     private double lado1, lado2, area, perimetro;
-    
-    //Este metodo calcula a area do quadrado
-    public double calcularArea(double lado1, double lado2){
-        area = lado1 * lado2;
-        return area;       
-    }   
-    
-    //Este metodo irá calcular o Pèrimeto
-   public double calcularPerimetro(){
-        perimetro = 4 * lado1 * lado2;
-        return perimetro;
-    }
-    
-
+     
     @Override
     public double calcularArea() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -38,7 +25,6 @@ public class Quadrado extends Bidimensional {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         perimetro = 4 * lado1 * lado2;
         return perimetro;
-    }
-    
+    }    
     
 }

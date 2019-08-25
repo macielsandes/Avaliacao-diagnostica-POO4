@@ -18,54 +18,37 @@ import javax.swing.JOptionPane;
  */
 public class Principal {
 
-      public static void main(String[] args) {
+    //classe principal 
+    public static void main(String[] args) {
         
-        int opcao; // variavel para guardar opcao escolhida pelo usuario
-        int i;
-          ArrayList<Formas> listaFormas = new ArrayList<Formas>(); 
+        //principal variaveis  
+        int opcao = 0;// variavel para guardar opcao escolhida pelo usuario
+        double base, area, altura, aresta, lado; // usada para armazer a informação digitada pelo usuario
+              
+        
+       //orientação passada pela processora para criar uma lista de objetos
+       //ArrayList<Formas> listaFormas = new ArrayList<Formas>(); 
        
-        // Pedindo para o usuario para escolher uma forma
-       opcao = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma das formas abaixo: \n"
-                + "1 - Para uma forma bidimensional \n"
-                + "2 - Para uma form tridimensional \n"));
-
-        //Ainda será necessário fazer correções nesta parte
-        if (opcao == 1) {
-        bidimensional();
-        
-        if (opcao == 2) {
-            tridimensional();      
-      }
-        
-        }
-      
-      }
-
-    //Menu caso o usuario escolha uma forma bidimensional
-    public static void bidimensional() {
-        
+       //Classes
         Circulo circulo = new Circulo(); // Chamando objetos que compoe o circulo
         Quadrado quadrado = new Quadrado();
         Triangulo triangulo = new Triangulo();
         
-        int escolha; // variavel para armazenar a escolha do usuario
-        double area;
+        while (opcao != 7 ){
         
-        escolha = Integer.parseInt(JOptionPane.showInputDialog("Escolha a forma que deseja calcular: \n"
+        //solicitando para que o usuario escolha uma forma gemétrica    
+        opcao  = Integer.parseInt(JOptionPane.showInputDialog("Escolha uma das formas Gemétricas abaixo:\n:"
                 + "1- Círculo\n"
                 + "2- Quadrado\n"
                 + "3- Triangulo\n"));
-
-        switch (escolha) {
+       
+        switch (opcao) {
             
             //caso o usuario escolha o circulo
-            case 1:
-                double tamanhoRaio;
-                
-                tamanhoRaio = Double.parseDouble(JOptionPane.showInputDialog("Informe o raio:"));
-                circulo.calcularArea(tamanhoRaio);
-                area = tamanhoRaio;
-                JOptionPane.showMessageDialog(null, "A area e: " + area);             
+          case 1:                
+              area = Double.parseDouble(JOptionPane.showInputDialog("Informe o tamanho do raio:"));
+              circulo.calcularArea(area);    
+              JOptionPane.showMessageDialog(null, "A area e: " + area);             
                 break;
             
             //caso o usuario escolha o quadrado    
@@ -85,8 +68,7 @@ public class Principal {
 
            case 3:
                 double base;
-                double altura;
-                
+                double altura;                
                 base = Double.parseDouble(JOptionPane.showInputDialog("Informe a base:"));
                 altura = Double.parseDouble(JOptionPane.showInputDialog("Informe o altera:"));
                 
@@ -96,14 +78,21 @@ public class Principal {
                 JOptionPane.showMessageDialog(null, "A area e:" + area); 
 
            //case 4:
+                
+            default:
+                    System.exit(0);
+            break;    
                   
                   
         }
 
+    } 
+    
     }
+}
 
 //Menu para o usuario escolher uma forma tridimensional 
-    public static void tridimensional() {
+   /* public static void tridimensional() {
         
         Cubo cubo = new Cubo();
                 
@@ -136,7 +125,10 @@ public class Principal {
                 
             case 2:
                 
-            case 3:*/
-    }
-}
-}
+            case 3:
+    }*/
+              
+         
+
+
+    

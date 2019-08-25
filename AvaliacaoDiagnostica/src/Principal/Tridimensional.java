@@ -7,13 +7,11 @@ package Principal;
 
 /**
  *
- * @author macie
+ * @author maciel
  */
-public abstract class Bidimensional extends Formas {
+public abstract class Tridimensional extends Formas {
     
-               
-    public abstract double calcularArea();        
+   public abstract double calcularArea();        
     public abstract double perimetro();
-    
     
 }
