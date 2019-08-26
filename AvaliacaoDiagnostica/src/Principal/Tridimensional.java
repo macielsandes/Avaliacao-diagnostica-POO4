@@ -10,8 +10,7 @@ package Principal;
  * @author maciel
  */
 public abstract class Tridimensional extends Formas {
-    
-   public abstract double calcularArea();        
-    public abstract double perimetro();
-    
+              
+   public abstract double CalcularVolume();
+   public abstract double calcularPerimetro(); 
 }

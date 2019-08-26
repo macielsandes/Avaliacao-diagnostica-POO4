@@ -13,7 +13,7 @@ public abstract class Bidimensional extends Formas {
     
                
     public abstract double calcularArea();        
-    public abstract double perimetro();
+    public abstract double CalcularPerimetro();
     
     
 }

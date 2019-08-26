@@ -9,22 +9,37 @@ package Principal;
  *
  * @author maciel
  */
+
+//Este metodo efetua o calculo de uma forma bidimensional
 public class Quadrado extends Bidimensional {
     
-    private double lado1, lado2, area, perimetro;
-     
+//principais variveis
+    private double lado, area, perimetro;
+
     @Override
     public double calcularArea() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        area = lado1 * lado2;
-        return area;   
+        area = getLado() * getLado();
+        return area;
     }
 
     @Override
-    public double perimetro() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        perimetro = 4 * lado1 * lado2;
+    public double CalcularPerimetro() {
+        perimetro = 4 * getLado() * getLado();
         return perimetro;
-    }    
-    
+    }
+
+    /**
+     * @return the lado
+     */
+    public double getLado() {
+        return lado;
+    }
+
+    /**
+     * @param lado the lado to set
+     */
+    public void setLado(double lado) {
+        this.lado = lado;
+    }
+
 }

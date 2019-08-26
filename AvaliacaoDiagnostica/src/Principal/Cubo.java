@@ -5,18 +5,40 @@
  */
 package Principal;
 
+import static java.lang.Math.pow;
+
 /**
  *
  * @author macie
  */
-public class Cubo {
-    
-    private double lado1, lado2, lado3, area;
-    
-    //Este metodo irá calcular a Area do quadrado
-    public double calcularCubo(double lado1, double lado2, double lado3){
-        area = lado1 * lado2 * lado3;
-        return area;       
+public class Cubo extends Tridimensional {
+
+    private double volume, perimetro, aresta;
+
+    //Este metodo irá calcular a area
+    @Override
+    public double calcularPerimetro() {
+        perimetro = (4 * pow (aresta, 2));
+        return perimetro;
     }
-    
+
+    //Este metodo irá calcular o perimetro 
+    @Override
+    public double CalcularVolume() {
+       volume = pow (aresta,3);
+        return volume;
+    }
+
+    /**
+     * @param aresta the aresta to set
+     */
+    public void setAresta(double aresta) {
+        this.aresta = aresta;
+    }
+
+  
+
+  
+
+  
 }

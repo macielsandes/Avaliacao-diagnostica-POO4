@@ -28,16 +28,48 @@ public class Triangulo extends Bidimensional{
     @Override
     public double calcularArea() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        area = ((base * altura) / 2);
+        area = ((getBase() * getAltura()) / 2);
         return area;
     }
 
+  
     @Override
-    public double perimetro() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public double CalcularPerimetro() {
         perimetro = (3 * lado);
         return perimetro;
+        
+        
     }
+
+    /**
+     * @return the base
+     */
+    public double getBase() {
+        return base;
+    }
+
+    /**
+     * @param base the base to set
+     */
+    public void setBase(double base) {
+        this.base = base;
+    }
+
+    /**
+     * @return the altura
+     */
+    public double getAltura() {
+        return altura;
+    }
+
+    /**
+     * @param altura the altura to set
+     */
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+    
+    
     
     
 }

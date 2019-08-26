@@ -12,28 +12,41 @@ package Principal;
 
 public class Circulo extends Bidimensional{        
         
-        //variavel principais
-        private double perimetro;
-        private double area;
-        private double raio;
-        private final double PI = Math.PI;
+      //variavel principais
+      private double perimetro;
+      private double area;
+      private double raio;
+      private final double PI = Math.PI;
         
     //Calcula a Area
     @Override
     public double calcularArea() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        area = PI *(raio * raio);
+        area = PI *(raio* raio);
             return area;       
     }
     
     //Calcular Perimetro
-    @Override
-    public double perimetro() {
-     //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        perimetro = ((2 * PI) * raio);
+   
+     @Override
+    public double CalcularPerimetro() {
+        perimetro = ((2 * PI) * getRaio());
         return perimetro;
+    }   
+    /**
+     * @return the raio
+     */
+    public double getRaio() {
+        return raio;
     }
-                  
+
+    /**
+     * @param raio the raio to set
+     */
+    public void setRaio(double raio) {
+        this.raio = raio;
+    }   
+        
+    
     }
 
    
