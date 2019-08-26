@@ -106,7 +106,7 @@ public class Principal {
                     altura = Double.parseDouble(JOptionPane.showInputDialog("Informe a altura de sua pirâmide: "));
                     piramide.setAltura(altura);
                     
-                     //atualiza na classe cubo o valor recebido pelo usuario
+                   //atualiza na classe cubo o valor recebido pelo usuario
                     piramide.CalcularVolume();
                     piramide.calcularPerimetro();
                     

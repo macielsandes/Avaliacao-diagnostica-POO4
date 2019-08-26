@@ -14,7 +14,7 @@ public class Piramide extends Tridimensional {
             
     @Override
     public double CalcularVolume() {
-         volume = (base * altura)/ 3;
+         volume = ((base * base ) * altura)/ 3;
          return volume;
     }
 
